@@ -22,7 +22,7 @@ public class MainClass {
 		
 		UserService userService = new UserService(); //instantiate the service (or inject by Spring or another framework)
 		GraphQLSchema schema = new GraphQLSchemaGenerator()
-		    .withBasePackages("it.dataone") //not mandatory but strongly recommended to set your "root" packages
+		    .withBasePackages("it.dataone.graphql.test") //not mandatory but strongly recommended to set your "root" packages
 		    .withOperationsFromSingleton(userService) //register the service
 		    .generate(); //done ;)
 		GraphQL graphQL = new GraphQL.Builder(schema)
