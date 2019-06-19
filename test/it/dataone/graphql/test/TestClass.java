@@ -24,11 +24,11 @@ public class TestClass {
 		    .withBasePackages("it.dataone.graphql.test") //not mandatory but strongly recommended to set your "root" packages
 		    .withOperationsFromSingleton(userService) //register the service
 		    .generate(); //done ;)
+		
 		GraphQL graphQL = new GraphQL.Builder(schema)
 			.build();
 
 		//keep the reference to GraphQL instance and execute queries against it.
-		//this operation selects a user by ID and requests name, regDate and twitterProfile fields only
 		ExecutionResult result = graphQL.execute(
 					getQuery(QueryType.GET_USERS)
 				);

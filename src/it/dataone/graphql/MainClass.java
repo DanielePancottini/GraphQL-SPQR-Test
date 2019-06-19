@@ -28,7 +28,6 @@ public class MainClass {
 			.build();
 
 		//keep the reference to GraphQL instance and execute queries against it.
-		//this operation selects a user by ID and requests name, regDate and twitterProfile fields only
 		ExecutionResult result = graphQL.execute(
 					//String for mutation query
 					"mutation {\r\n" + 
