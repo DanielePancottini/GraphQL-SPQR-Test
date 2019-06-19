@@ -30,10 +30,11 @@ public class TestClass {
 		//keep the reference to GraphQL instance and execute queries against it.
 		//this operation selects a user by ID and requests name, regDate and twitterProfile fields only
 		ExecutionResult result = graphQL.execute(
-					getQuery(QueryType.DELETE_USER)
+					getQuery(QueryType.GET_USERS)
 				);
 		
 		System.err.println(result);
+		System.err.println(result.getData().toString());
 	}
 	
 	public enum QueryType{
