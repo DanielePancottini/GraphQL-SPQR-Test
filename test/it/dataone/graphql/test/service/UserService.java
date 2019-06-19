@@ -6,7 +6,14 @@ import io.leangen.graphql.annotations.GraphQLArgument;
 import io.leangen.graphql.annotations.GraphQLMutation;
 import io.leangen.graphql.annotations.GraphQLQuery;
 import it.dataone.graphql.test.domain.User;
-import storage.StorageLocal;
+import it.dataone.graphql.test.storage.StorageLocal;
+
+/**
+ * Classe che definisce tutti i resolvers per la classe {@link User}
+ * 
+ * @author Daniele Pancottini
+ *
+ */
 
 public class UserService {
 	

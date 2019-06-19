@@ -2,9 +2,18 @@ package it.dataone.graphql.test.domain;
 
 import io.leangen.graphql.annotations.GraphQLQuery;
 
+/**
+ * Classe di dominio che definisce l' Utente, tutti i 'getters' sono annotati
+ * con l' annotazione {@link GraphQLQuery} in modo da permettere la parzializzazione dei dati
+ * in maniera automatica
+ * 
+ * @author Daniele Pancottini
+ *
+ */
+
 public class User {
 
-	private String name;
+	private String name;	
     private Integer id;
     private String registrationDate;
 
@@ -18,7 +27,7 @@ public class User {
     
     //GETTERS & SETTERS
     
-    @GraphQLQuery(name = "name", description = "A person's name")
+    @GraphQLQuery(name = "name", description = "Nome dell' utente")
     public String getName() {
         return name;
     }
@@ -28,7 +37,7 @@ public class User {
         return id;
     }
 
-    @GraphQLQuery(name = "regDate", description = "Date of registration")
+    @GraphQLQuery(name = "regDate", description = "Data di registrazione")
     public String getRegistrationDate() {
         return registrationDate;
     }
